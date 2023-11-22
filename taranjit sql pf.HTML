@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <style>
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            overflow-x: hidden;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+        }
+
+        .sidebar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        body {
+            background-color: darkblue;/* Light gray background */
+            color: #333; /* Dark text color */
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #2c3e50; /* Dark blue heading */
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #e74c3c; /* Warm red heading */
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        li::before {
+            color: #e74c3c; /* Warm red bullet color */
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        hr {
+            border: 2px solid #3498db; /* Bright blue line */
+        }
+
+        a {
+            color: #e74c3c; /* Warm red link color */
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #c0392b; /* Slightly darker red on hover */
+        }
+
+        /* Center align elements */
+        .center {
+            text-align: center;
+        }
+
+        /* Container for content */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: darkblue; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+
+        /* Background color for sections */
+        .section-bg {
+            background-color: #f2f2f2; /* Light gray background for sections */
+            padding: 30px;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll(".sidebar a");
+
+            navLinks.forEach((link) => {
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute("href").substring(1); // Remove the # symbol
+                    const targetSection = document.getElementById(targetId);
+
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop,
+                            behavior: "smooth",
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body >
+    <div class="sidebar">
+        <a class="active" href="taranjit sql pf.HTML">Home</a>
+        <a href="#Skills">Skills</a>
+        <a href="#Education">Education</a>
+        <a href="#Courses">Courses</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Extracurricular">Extracurricular</a>
+    </div>
+    <div class="content">
+        <div class="container">
+            <h1 class="center" style="color:black;">TARANJIT KAUR</h1>
+            <p class="center"style="color:Tomato"><a href="https://www.linkedin.com/in/taranjit-kaur-9201b8255/">LinkedIn</a> | taranjitkaurtamber@gmail.com</p>
+            <p class="center" style="color:Tomato;" >8727901027</p>
+            <div class="section-bg" id="Skills">
+                <h2>Skills</h2>
+                <hr>
+                <ul>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>PHP</li>
+                    <li>Canva</li>
+                    <li>Python</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>SQL</li>
+                    <li>HTML</li>
+                    <li>Figma (basic)</li>
+                </ul>
+            </div>
+
+            <div class="section-bg" id="Education">
+                <h2>Education</h2>
+                <hr>
+                <ul>
+                    <li>MASTER OF COMPUTER APPLICATIONS (M.C.A)</li>
+                    <ul>
+                        <li>PURSUING FROM PANJAB UNIVERSITY (2023-PRESENT)</li>
+                    </ul>
+                    <li>BACHELOR OF COMPUTER APPLICATIONS</li>
+                    <ul>
+                        <li>PURSUED FROM GURU GOBIND SINGH COLLEGE FOR WOMEN (AFFILIATED WITH PANJAB UNIVERSITY)</li>
+                        <li>GAINED 79.65%</li>
+                    </ul>
+                    <li>12TH</li>
+                    <ul>
+                        <li>PURSUED FROM STEPPING STONES SCHOOL SECTOR 37-D (AFFILIATED WITH CBSE)</li>
+                        <li>GAINED 59.6%</li>
+                    </ul>
+                    <li>10TH</li>
+                    <ul>
+                        <li>PURSUED FROM GOVT. MODEL SENIOR SECONDARY SCHOOL (AFFILIATED WITH CBSE)</li>
+                        <li>GAINED 66.73%</li>
+                    </ul>
+                </ul>
+            </div>
+    
+            <div class="section-bg" id="Projects">
+                <h2>Projects</h2>
+                <hr>
+                <ul>
+                    <li>TIC-TAC-TOE in Python</li>
+                    <li>Website on Animal Care using HTML, CSS, JavaScript</li>
+                    <li>A Login page integrated with database using SQL, PHP, and Wamp server</li>
+                    <li>Sudoku Solver in PYTHON</li>
+                </ul>
+            </div>
+    
+            <div class="section-bg" id="Extracurricular">
+                <h2>Extracurricular </h2>
+                <hr>
+                <ul>
+                    <li>PARTICIPATED IN POWERPOINT PRESENTATION (GAINED 3RD POSITION)</li>
+                    <li>PARTICIPATED IN VIDEO EDITING COMPETITION (GAINED A POSITION IN TOP 15 IN WHOLE NORTH AREA CAMPUSES)</li>
+                    <li>LOGO DESIGNING AS HOBBY</li>
+                </ul>
+            </div>
+    
+            <div class="section-bg" id="Courses">
+                <h2>Courses</h2>
+                <hr>
+                <ul>
+                    <li>Basic Game Development with Levels using Scratch (Coursera Project Network) </li>
+                    <li>Build a mobile app with Google Sheets on Glide (Coursera Project Network)</li>
+                    <li>Create a Lead Generation Messenger Chatbot using Chatfuel (Coursera Project Network)</li>
+                </ul>
+        </div>
+    </div>
+</body>
+</html>
